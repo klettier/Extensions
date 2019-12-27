@@ -42,9 +42,8 @@ namespace Microsoft.Extensions.Configuration
                         return v;
                     }
 
-                    return default;
-                })
-                .Where(s => s != default);
+                    return Array.Empty<string>();
+                });
 
             return children.Concat(mapKeys).Distinct(StringComparer.OrdinalIgnoreCase);
         }
