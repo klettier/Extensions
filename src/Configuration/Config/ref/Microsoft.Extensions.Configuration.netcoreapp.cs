@@ -1,8 +1,16 @@
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using System;
+using System.Collections.Generic;
+
 namespace Microsoft.Extensions.Configuration
 {
+    public static partial class RemapConfigurationExtensions
+    {
+        public static IConfigurationBuilder AddKeySwapper(this IConfigurationBuilder configurationBuilder, Action<IConfigurationBuilder> configureBuilder, IDictionary<string, string> keysToSwap) { throw null; }
+    }
+    
     public static partial class ChainedBuilderExtensions
     {
         public static Microsoft.Extensions.Configuration.IConfigurationBuilder AddConfiguration(this Microsoft.Extensions.Configuration.IConfigurationBuilder configurationBuilder, Microsoft.Extensions.Configuration.IConfiguration config) { throw null; }
